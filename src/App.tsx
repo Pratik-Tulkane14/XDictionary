@@ -19,8 +19,9 @@ function App() {
     ]
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!input) {
-      setSuggestion("");
+    if (!input.trim()) {
+      setSuggestion("Please enter a word.");
+      return;
     }
     const result = data.find((item) =>
       item.word.toLowerCase() === input.toLowerCase())
@@ -38,11 +39,9 @@ function App() {
         <input type="text" placeholder='Search for a word...' value={input} onChange={(e) => setInput(e.target.value)} name="input" id="input" />
         <button type="submit" onClick={(e) => handleSubmit(e)}>Search</button>
       </form>
-      <strong>Definition:
-        <p>
-          {suggestion && suggestion}
-        </p>
-      </strong>
+      <strong>Definition:</strong>
+      {suggestion && <span>suggestion</span>
+      }
     </>
   )
 }
