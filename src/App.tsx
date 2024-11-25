@@ -32,7 +32,7 @@ function App() {
     <>
       <h3>Dictionary App</h3>
       <form>
-        <input type="text" value={input} onChange={(e) => setInput(e.target.value)} name="input" id="input" />
+        <input type="text" placeholder='Search for a word' value={input} onChange={(e) => setInput(e.target.value)} name="input" id="input" />
         <button type="submit" onClick={(e) => handleSubmit(e)}>Search</button>
       </form>
       <strong>Definition:{suggestion && suggestion}</strong>
