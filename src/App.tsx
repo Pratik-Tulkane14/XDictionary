@@ -19,7 +19,7 @@ function App() {
     ]
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if(!input){
+    if (!input) {
       setSuggestion("");
     }
     const result = data.find((item) =>
@@ -38,7 +38,11 @@ function App() {
         <input type="text" placeholder='Search for a word...' value={input} onChange={(e) => setInput(e.target.value)} name="input" id="input" />
         <button type="submit" onClick={(e) => handleSubmit(e)}>Search</button>
       </form>
-      <strong>Definition:{suggestion && suggestion}</strong>
+      <strong>Definition:
+        <p>
+          {suggestion && suggestion}
+        </p>
+      </strong>
     </>
   )
 }
