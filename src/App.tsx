@@ -20,7 +20,7 @@ function App() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!input.trim()) {
-      setSuggestion("Please enter a word.");
+      setSuggestion("Word not found in the dictionary.")
       return;
     }
     const result = data.find((item) =>
