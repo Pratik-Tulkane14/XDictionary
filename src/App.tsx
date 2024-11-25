@@ -35,7 +35,7 @@ function App() {
         <input type="text" value={input} onChange={(e) => setInput(e.target.value)} name="input" id="input" />
         <button type="submit" onClick={(e) => handleSubmit(e)}>Search</button>
       </form>
-      <strong>Defination:{suggestion && suggestion}</strong>
+      <strong>Definition:{suggestion && suggestion}</strong>
     </>
   )
 }
