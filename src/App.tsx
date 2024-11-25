@@ -40,8 +40,7 @@ function App() {
         <button type="submit" onClick={(e) => handleSubmit(e)}>Search</button>
       </form>
       <strong>Definition:</strong>
-      {suggestion && <span>suggestion</span>
-      }
+      {suggestion && suggestion}
     </>
   )
 }
